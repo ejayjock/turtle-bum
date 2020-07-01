@@ -1,10 +1,10 @@
---[[ Script cleans all local files and syncs with github repository]]--
+-- Code to clean out existing turtle directory and clone the git repository to this local directory. NOTE: This will delete any local files!
 
-local gUser = "ejayjock"
-local gRepo = "turtle-bum"
-local gBranch = "master"
-local gPath=""
+local tName = "bum"
+local gitRunCmd="github"
+local gitArgs=" clone ejayjock/turtle-"..tName
 
+<<<<<<< HEAD
 local usage = [[
  github <user> <repo> [path] [remote path] [branch]
  Remote path defaults to the root of the repo.
@@ -188,3 +188,9 @@ if fs.exists("downloads/"..gRepo.."/refresh.lua") then
 else
   print("Error in syncing gitHub Repo.")
 end
+=======
+shell.run('cd /')
+shell.run('rm turtle-'..tName)
+shell.run(gitRunCmd..gitArgs)
+shell.run('cd turtle-'..tName)
+>>>>>>> eaa1e301a94ed7e8c889ff2c62ba2b3c9af0655b
