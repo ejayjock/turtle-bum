@@ -1,6 +1,7 @@
 print("how Deep")
 nDeeep=io.read()
 nDeeep=tonumber(nDeeep)
+print("i am a stupid computer")
 
 for j=1,20 do
 
