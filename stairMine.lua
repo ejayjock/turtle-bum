@@ -8,3 +8,13 @@ Series of turtle commands:
   - move down
   - dig Forward
   - move forward ]]
+for i=1,5 do
+  - turtle.digUp()
+  - turtle.Up()
+  - turtle.digUp()
+  - turtle.down()
+  - turtle.down()
+  - turtle.down()
+  - turtle.digforward()
+  - turtle.forward()
+end
