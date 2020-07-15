@@ -36,8 +36,8 @@ turtle.up()
     --turtle.dig()
     cont=true
     while cont do
-    if turtle detectUp() then
-      turtle digUp()
+    if turtle.detectUp() then
+      turtle.digUp()
     else
       cont=false
      end
