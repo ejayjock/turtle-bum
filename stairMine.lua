@@ -9,11 +9,29 @@ Series of turtle commands:
   - dig Forward
   - move forward ]]
 for i=1,5 do
-    turtle.digUp()
-    turtle.Up()
-    turtle.digUp()
+    --turtle.digUp()
+cont=true
+while cont do
+if turtle detectUp() then
+  turtle digUp()
+else
+  cont=false
+ end
+end
+turtle.up()
+      --turtle.digUp()
+    cont=true
+    while cont do
+    if turtle detectUp() then
+      turtle digUp()
+    else
+      cont=false
+     end
+    end
+
+
     turtle.down()
-    turtle.down()
+    turtle.digdown()
     turtle.down()
     turtle.dig()
     turtle.forward()
