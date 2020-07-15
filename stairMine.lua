@@ -8,7 +8,7 @@ Series of turtle commands:
   - move down
   - dig Forward
   - move forward ]]
-for i=1,5 do
+for i=1,50 do
     --turtle.digUp()
 cont=true
 while cont do
