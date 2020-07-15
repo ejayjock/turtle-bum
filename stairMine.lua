@@ -31,7 +31,7 @@ turtle.up()
 
 
     turtle.down()
-    turtle.digdown()
+    turtle.digDown()
     turtle.down()
     turtle.dig()
     turtle.forward()
