@@ -8,6 +8,10 @@ Series of turtle commands:
   - move down
   - dig Forward
   - move forward ]]
+
+
+
+
 function clearUp()
   cont=true
   while cont do
@@ -18,6 +22,17 @@ function clearUp()
     end
   end
 end
+function clear()
+  cont=true
+  while cont do
+    if turtle.detect() then
+      turtle.dig()
+    else
+      cont=false
+    end
+  end
+end
+
 
 for i=1,50 do
 clearUp()
@@ -26,6 +41,6 @@ clearUp()
 turtle.down()
 turtle.digDown()
 turtle.down()
-
-
+clear()
+turtle.forward()
 end
