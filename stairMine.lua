@@ -7,7 +7,7 @@ Series of turtle commands:
   - dig down
   - move down
   - dig Forward
-  - move forward ]]
+  - move forward  ]]
 
 
 
