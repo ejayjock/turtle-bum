@@ -41,6 +41,10 @@ function filldown()
   end
 end
 
+print("how Deep put in cobblestone in number 1 slot")
+nDeeep=io.read()
+nDeeep=tonumber(nDeeep)
+print("i am a stupid computer put in cobblestone")
 
 for i=1,50 do
 clearUp()
