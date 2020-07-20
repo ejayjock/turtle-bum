@@ -34,26 +34,26 @@ function clear()
 end
 
 
-function filldown()
+function filldown(slot)
   if not turtle.detectDown() then
-  turtle.select(1)
+  turtle.select(slot)
   turtle.placeDown()
   end
 end
 
-print("how Deep put in cobblestone in number 1 slot")
-nDeeep=io.read()
-nDeeep=tonumber(nDeeep)
-print("i am a stupid computer put in cobblestone")
+print("how Deep?")
+nDeeep=tonumber(io.read())
+print("What slot is the material in?")
+nSlot=tonumber(io.read())
 
-for i=1,50 do
+for i=1,nDeeep do
 clearUp()
 turtle.up()
 clearUp()
 turtle.down()
 turtle.digDown()
 turtle.down()
-filldown()
+filldown(nSlot)
 clear()
 turtle.forward()
 end
