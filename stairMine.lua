@@ -34,6 +34,14 @@ function clear()
 end
 
 
+function filldown()
+  if not turtle.detectDown() then
+  turtle.select(1)
+  turtle.placeDown()
+  end
+end
+
+
 for i=1,50 do
 clearUp()
 turtle.up()
@@ -41,6 +49,7 @@ clearUp()
 turtle.down()
 turtle.digDown()
 turtle.down()
+filldown()
 clear()
 turtle.forward()
 end
