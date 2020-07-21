@@ -43,7 +43,7 @@ end
 
 print("how Deep?")
 nDeeep=tonumber(io.read())
-print("What slot is the material in?")
+print("What number slot is the fill material in?")
 nSlot=tonumber(io.read())
 
 for i=1,nDeeep do
