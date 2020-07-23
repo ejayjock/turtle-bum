@@ -10,8 +10,7 @@ when out of bone meal get more from chest]]
 function BoneMeal()
   cont=true()
   while cont do
-  turtle.place()
- else
+  cont=turtle.place()
   cont=false
 end
  end
