@@ -8,29 +8,21 @@ when out of bone meal get more from chest]]
 
 
 function BoneMeal()
-  cont=true
+  cont=true()
   while cont do
-<<<<<<< HEAD
-  cont=turtle.place()
-  cont=false
-end
- end
-=======
     cont=turtle.place()
   else
     cont=false
->>>>>>> 36c7602f47dc08c89d8d8212ed2643376bd33750
   end
 end
 
-while turtle.place() do
-  print("placing bone meal")
-end
-print("Plant Fully Grown")
+print("how Deep?")
+nDeeep=tonumber(io.read())
 
-
-turtle.dig()
-turtle.select(2)
-turtle.place()
-turtle.select(1)
+for q=1,nDeeep do
+  turtle.dig()
+  turtle.select(2)
+  turtle.place()
+  turtle.select(1)
 BoneMeal()
+end
