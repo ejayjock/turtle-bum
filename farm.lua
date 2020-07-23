@@ -8,14 +8,18 @@ when out of bone meal get more from chest]]
 
 
 function BoneMeal()
-  cont=true()
+  cont=true
   while cont do
-  turtle.place()
- else
-  cont=false
-end
- end
+    cont=turtle.place()
+  else
+    cont=false
   end
+end
+
+while turtle.place() do
+  print("placing bone meal")
+end
+print("Plant Fully Grown")
 
 
 turtle.dig()

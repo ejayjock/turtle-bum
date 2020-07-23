@@ -9,9 +9,6 @@ Series of turtle commands:
   - dig Forward
   - move forward  ]]
 
-
-
-
 function clearUp()
   cont=true
   while cont do
