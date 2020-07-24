@@ -35,7 +35,7 @@ function BoneMeal()
   end
 end
 
-print("how Deep?")
+print("how deep?")
 nDeeep=tonumber(io.read())
 
 for q=1,nDeeep do
