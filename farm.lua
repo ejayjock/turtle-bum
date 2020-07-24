@@ -6,7 +6,8 @@ repeat to farm the crops and get drops from the plant
 when inventory full put crops in chest
 when out of bone meal get more from chest]]
 
-local seadsName="minecraft:seeds"
+local seeds="minecraft:seeds"
+local BoneMeal="minecraft:bonemeal"
 
 function selectItem(itemName)
   local cont=true
@@ -40,13 +41,8 @@ nDeeep=tonumber(io.read())
 
 for q=1,nDeeep do
   turtle.dig()
-  turtle.select(2)
+  selectItem(seeds)
   turtle.place()
-  turtle.select(1)
+  selectItem()
 BoneMeal()
 end
-
-local seeds="minecraft:seeds"
-
-selectItem("minecraft:seeds")
-selectItem(sName)
