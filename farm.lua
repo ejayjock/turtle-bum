@@ -6,6 +6,8 @@ repeat to farm the crops and get drops from the plant
 when inventory full put crops in chest
 when out of bone meal get more from chest]]
 
+local seadsName="minecraft:seeds"
+
 function selectItem(itemName)
   local cont=true
   local i=1
@@ -13,11 +15,13 @@ function selectItem(itemName)
     if turtle.getItemDetail(i).name==itemName then
       turtle.select(i)
       cont=false
+      return true
     end
     i=i+1
-    if i>16 then
+    if i==16 then
       print("Warning Item "..itemName.." not found in inventory!")
       cont = false
+      return false
     end
   end
 end
@@ -41,3 +45,8 @@ for q=1,nDeeep do
   turtle.select(1)
 BoneMeal()
 end
+
+local seeds="minecraft:seeds"
+
+selectItem("minecraft:seeds")
+selectItem(sName)
