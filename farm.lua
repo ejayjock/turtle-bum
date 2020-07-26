@@ -25,7 +25,7 @@ function selectItem(itemName)
       end
     end
     i=i+1
-    if and(i==16,cont) then
+    if i==16 and cont then
       print("Warning Item "..itemName.." not found in inventory!")
       cont = false
       return false
@@ -83,7 +83,7 @@ end
 --nDeeep=tonumber(io.read())
 
 local cont
-if and(seedCheck(),boneGet()) then
+if seedCheck() and boneGet() then
   cont=true
 else
   cont=false
@@ -100,7 +100,7 @@ while cont do
   bGet=boneGet()
   sCheck=seedCheck()
 
-  if or(bGet==false,sCheck==false) then
+  if bGet==false or sCheck==false then
     cont=false
   end
 end
