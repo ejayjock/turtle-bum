@@ -52,19 +52,22 @@ function BoneMeal()
     selectItem(boneMeal)
     cont=turtle.place()
   end
-end 
+end
 
 function boneGet()
     local boneMeal="minecraft:dye"
     if countItem(boneMeal)<10 then
       turtle.turnRight()
       if turtle.suck()==false then
+        turtle.turnLeft()
         return false
       else
+        turtle.turnLeft()
         return true
       end
-      turtle.turnLeft()
+
     else
+      turtle.turnLeft()
       return true
     end
 end
