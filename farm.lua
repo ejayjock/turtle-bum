@@ -51,8 +51,6 @@ function BoneMeal()
   while cont do
     selectItem(boneMeal)
     cont=turtle.place()
-  else
-    cont=false
   end
 end
 
