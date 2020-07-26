@@ -46,7 +46,7 @@ function countItem(itemName)
 end
 
 function BoneMeal()
-  local local boneMeal="minecraft:dye"
+  local boneMeal="minecraft:dye"
   local cont=true
   while cont do
     selectItem(boneMeal)
