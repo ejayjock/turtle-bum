@@ -81,7 +81,7 @@ end
 --nDeeep=tonumber(io.read())
 
 local cont
-if seedCheck()
+if seedCheck() then
   print("Seed check is true")
 else
   print("seed Check is false")
