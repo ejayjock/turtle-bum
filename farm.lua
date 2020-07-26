@@ -1,13 +1,17 @@
---[[hoe space to plant seeds
+--[[
+if turtle has less than 10 boneMeal then get boneMeal from right chest
+check for seeds in the turtle
+hoe space to plant seeds
 plant seeds
 apply bone meal until fully grown
 chop plant to get drops
-repeat to farm the crops and get drops from the plant
-when inventory full put crops in chest
-when out of bone meal get more from chest]]
 
-local seeds="minecraft:seeds"
-local BoneMeal="minecraft:bonemeal"
+Loop continues until: out of seeds, or out of boneMeal]]
+
+--assume the only dye in the turtle or in the chest is boneMeal
+
+local seeds="minecraft:wheat_seeds"
+local boneMeal="minecraft:dye"
 
 function selectItem(itemName)
   local cont=true
@@ -27,22 +31,65 @@ function selectItem(itemName)
   end
 end
 
+function countItem(itemName)
+end
+
 function BoneMeal()
-  cont=true
+  local local boneMeal="minecraft:dye"
+  local cont=true
   while cont do
+    selectItem(boneMeal)
     cont=turtle.place()
   else
     cont=false
   end
 end
 
-print("how deep?")
-nDeeep=tonumber(io.read())
+function boneGet()
+    local boneMeal="minecraft:dye"
+    if countItem(boneMeal)<10 then
+      turtle.turnRight()
+      if turtle.suck()==false then
+        return false
+      else
+        return true
+      end
 
-for q=1,nDeeep do
+    end
+end
+
+function seedCheck()
+  local seeds="minecraft:wheat_seeds"
+  local out=selectItem(seeds)
+  if out==true then
+    return true
+  else
+    return false
+  end
+end
+
+--print("how deep?")
+--nDeeep=tonumber(io.read())
+
+local cont
+if and(seedCheck(),boneGet()) then
+  cont=true
+else
+  cont=false
+  print("seeds or BoneMeal not found")
+end
+
+while cont do
   turtle.dig()
   selectItem(seeds)
   turtle.place()
-  selectItem()
-BoneMeal()
+  BoneMeal()
+  turtle.dig()
+
+  bGet=boneGet()
+  sCheck=seedCheck()
+
+  if or(bGet==false,sCheck==false) then
+    cont=false
+  end
 end
