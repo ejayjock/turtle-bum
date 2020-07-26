@@ -81,7 +81,12 @@ end
 --nDeeep=tonumber(io.read())
 
 local cont
-print("Seed Check is: "..seedCheck())
+if seedCheck()
+  print("Seed check is true")
+else
+  print("seed Check is false")
+end
+
 if seedCheck() and boneGet() then
   cont=true
 else
