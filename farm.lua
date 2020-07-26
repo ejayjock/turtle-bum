@@ -63,6 +63,7 @@ function boneGet()
       else
         return true
       end
+      turtle.turnLeft()
     else
       return true
     end
