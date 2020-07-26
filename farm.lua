@@ -17,13 +17,15 @@ function selectItem(itemName)
   local cont=true
   local i=1
   while cont do
-    if turtle.getItemDetail(i).name==itemName then
-      turtle.select(i)
-      cont=false
-      return true
+    if turtle.getItemCount(i)>0 then
+      if turtle.getItemDetail(i).name==itemName then
+        turtle.select(i)
+        cont=false
+        return true
+      end
     end
     i=i+1
-    if i==16 then
+    if and(i==16,cont) then
       print("Warning Item "..itemName.." not found in inventory!")
       cont = false
       return false
@@ -32,6 +34,15 @@ function selectItem(itemName)
 end
 
 function countItem(itemName)
+  count=0
+  for i=1,16 do
+    if turtle.getItemCount(i)>0 then
+      if turtle.getItemDetail(i).name==itemName then
+        count=count+turtle.getItemCount(i)
+      end
+    end
+  end
+  return count
 end
 
 function BoneMeal()
