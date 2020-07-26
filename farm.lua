@@ -63,7 +63,8 @@ function boneGet()
       else
         return true
       end
-
+    else
+      return true
     end
 end
 
@@ -81,11 +82,13 @@ end
 --nDeeep=tonumber(io.read())
 
 local cont
-if seedCheck() then
-  print("Seed check is true")
-else
-  print("seed Check is false")
-end
+-- if seedCheck() then
+--   print("Seed check is true")
+-- else
+--   print("seed Check is false")
+-- end
+
+
 
 if seedCheck() and boneGet() then
   cont=true
