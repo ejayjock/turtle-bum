@@ -82,7 +82,22 @@ function seedCheck()
 end
 
 function invenCheck()
---if inventory full return true else return false
+  local emptySlots=0
+  for i=1,16 do
+    if turtle.getItemCount(i)==0 then
+      emptySlots=emptySlots+1
+    end
+  end
+
+  -- If 1 or less slots are empty
+  if emptySlots>1 then
+    return true
+  else
+    return false
+  end
+end
+
+
 end
 
 function wheatBeGone()
