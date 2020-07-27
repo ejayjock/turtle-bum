@@ -81,16 +81,24 @@ function seedCheck()
   end
 end
 
---print("how deep?")
---nDeeep=tonumber(io.read())
+function invenCheck()
+--if inventory full return true else return false
+end
+
+function wheatBeGone()
+  turtle.turnLeft()
+  cont=true
+  while cont do
+    cont=selectItem("minecraft:wheat")
+    if cont==true then
+      turtle.drop()
+    end
+  else
+    cont=false
+  end
+end
 
 local cont
--- if seedCheck() then
---   print("Seed check is true")
--- else
---   print("seed Check is false")
--- end
-
 
 
 if seedCheck() and boneGet() then
@@ -106,6 +114,9 @@ while cont do
   turtle.place()
   BoneMeal()
   turtle.dig()
+  if invenCheck()==true then
+    wheatBeGone()
+  end
 
   bGet=boneGet()
   sCheck=seedCheck()
