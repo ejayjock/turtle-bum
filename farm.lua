@@ -105,9 +105,8 @@ function wheatBeGone()
     if cont==true then
       turtle.drop()
     end
-  else
-    cont=false
   end
+  
 end
 
 local cont
