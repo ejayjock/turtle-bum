@@ -106,7 +106,7 @@ function wheatBeGone()
       turtle.drop()
     end
   end
-  
+  turtle.turnRight()
 end
 
 local cont
@@ -127,6 +127,7 @@ while cont do
   turtle.dig()
   if invenCheck()==true then
     wheatBeGone()
+
   end
 
   bGet=boneGet()
