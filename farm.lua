@@ -97,9 +97,6 @@ function invenCheck()
   end
 end
 
-
-end
-
 function wheatBeGone()
   turtle.turnLeft()
   cont=true
