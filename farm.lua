@@ -127,7 +127,6 @@ while cont do
   turtle.dig()
   if invenCheck()==true then
     wheatBeGone()
-
   end
 
   bGet=boneGet()
