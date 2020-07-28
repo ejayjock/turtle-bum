@@ -111,7 +111,7 @@ end
 
 function seedBeGone()
     local seeds="minecraft:wheat_seeds"
-    turtle.turnRight()
+    turtle.turnLeft()
     cont=true
   while cont do
     if cont==true then
@@ -119,6 +119,7 @@ function seedBeGone()
       turrtle.drop()
     end
   end
+  turtle.turnRight()
 end
 
 
@@ -138,6 +139,7 @@ while cont do
   turtle.place()
   BoneMeal()
   turtle.dig()
+
   if invenCheck()==true then
     wheatBeGone()
   end
