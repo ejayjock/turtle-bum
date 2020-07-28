@@ -91,9 +91,9 @@ function invenCheck()
 
   -- If 1 or less slots are empty
   if emptySlots>1 then
-    return true
-  else
     return false
+  else
+    return true
   end
 end
 
