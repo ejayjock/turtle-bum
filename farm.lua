@@ -110,9 +110,9 @@ function wheatBeGone()
 end
 
 function seedBeGone()
-    local seeds="minecraft:wheat_seeds"
-    turtle.turnLeft()
-    cont=true
+  local seeds="minecraft:wheat_seeds"
+  turtle.turnLeft()
+  cont=true
   while cont do
     if cont==true then
       selectItem(seeds)
@@ -138,11 +138,15 @@ while cont do
   selectItem(seeds)
   turtle.place()
   BoneMeal()
-  turtle.dig()
 
   if invenCheck()==true then
     wheatBeGone()
+    seedBeGone()
   end
+
+  turtle.dig()
+
+
 
   bGet=boneGet()
   sCheck=seedCheck()
