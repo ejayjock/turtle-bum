@@ -122,8 +122,6 @@ function seedBeGone()
 end
 
 
-end
-
 local cont
 
 
