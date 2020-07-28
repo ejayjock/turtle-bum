@@ -138,17 +138,14 @@ while cont do
   turtle.dig()
   selectItem(seeds)
   turtle.place()
-  BoneMeal()
 
   if invenCheck()==true then
     wheatBeGone()
     seedBeGone()
   end
 
+  BoneMeal()
   turtle.dig()
-
-
-
   bGet=boneGet()
   sCheck=seedCheck()
 
