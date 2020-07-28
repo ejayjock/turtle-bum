@@ -116,7 +116,7 @@ function seedBeGone()
   while cont do
     if cont==true then
       selectItem(seeds)
-      turrtle.drop()
+      turtle.drop()
     end
   end
   turtle.turnRight()
