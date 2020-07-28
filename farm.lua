@@ -109,6 +109,21 @@ function wheatBeGone()
   turtle.turnRight()
 end
 
+function seedBeGone()
+    local seeds="minecraft:wheat_seeds"
+    turtle.turnRight()
+    cont=true
+  while cont do
+    if cont==true then
+      selectItem(seeds)
+      turrtle.drop()
+    end
+  end
+end
+
+
+end
+
 local cont
 
 
