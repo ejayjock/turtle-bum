@@ -114,6 +114,7 @@ function seedBeGone()
   turtle.turnLeft()
   cont=true
   while cont do
+    cont=selectItem(seeds)
     if cont==true then
       selectItem(seeds)
       turtle.drop()
