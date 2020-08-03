@@ -130,7 +130,7 @@ for j=1,sqaresize do
     turtle.digDown()
     while turtle.forward()==false do end
       -- body...
-    end
+
   end
 
   if isodd(j) then
