@@ -63,7 +63,7 @@ function isodd(numb)
 end
 
 -- Checks to see if inventory is approaching full
--- It will return True if 1 or less slots are available
+-- It will return True if 4 or less slots are available
 function invenCheck()
   local emptySlots=0
   for i=1,16 do
@@ -72,8 +72,8 @@ function invenCheck()
     end
   end
 
-  -- If 1 or less slots are empty
-  if emptySlots>1 then
+  -- If 4 or less slots are empty
+  if emptySlots>4 then
     return false
   else
     return true
@@ -128,7 +128,9 @@ for j=1,sqaresize do
     clearUp()
     clear()
     turtle.digDown()
-    turtle.forward()
+    while turtle.forward()==false do end
+      -- body...
+    end
   end
 
   if isodd(j) then
@@ -140,7 +142,7 @@ for j=1,sqaresize do
   clearUp()
   clear()
   turtle.digDown()
-  turtle.forward()
+  while turtle.forward()==false do end
   nojunk()
 
   if isodd(j) then
@@ -153,11 +155,11 @@ end
 -- Part 3: turtle goes back to starting point
 turtle.turnLeft()
 for k=1,sqaresize do
-  turtle.forward()
+  while turtle.forward()==false do end
 end
 
 -- Part 4: turtle goes back up.
 for o=1,nDeeep do
-  turtle.digUp()
+  clearUp()
   turtle.up()
 end
